@@ -2070,23 +2070,14 @@ void filehandle::clear_course() {
 int main() {
 
 	RectangleShape rectangle(Vector2f(1200, 700)); 
-	Color customColor(215, 205, 204); 
-	rectangle.setFillColor(customColor);
+	rectangle.setFillColor(Color(215, 205, 204));
     RectangleShape rectangle1(Vector2f(400, 205)); 
-	Color customColor1(212,210,213);
-	rectangle1.setFillColor(customColor1);
+	rectangle1.setFillColor(Color(212, 210, 213));
 	rectangle1.setOutlineThickness(5.f);
 	rectangle1.setOutlineColor(Color(110, 106, 111));
 	float x1, y1;
 	x1 =770;
 	y1 = 10;
-	RectangleShape rectanglef(Vector2f(502, 197));
-	rectanglef.setFillColor(Color(212, 210, 213));
-	rectanglef.setOutlineThickness(5.f);
-	rectanglef.setOutlineColor(Color(212, 210, 213));
-	float x3, y3;
-	x3 = 10;
-	y3 = 250;
 	RectangleShape rectangle2(Vector2f(280, 100));
 	rectangle2.setFillColor(Color(212, 210, 213));
 	rectangle2.setOutlineThickness(5.f);
@@ -2097,7 +2088,7 @@ int main() {
 	RenderWindow window(VideoMode(1200, 700), "nimra");
 	Font font;
 	font.loadFromFile("font.otf");
-	Text text, text1, text2, text3, text4, text5, text6, text7;
+	Text text, text1, text2, text3;
 	text.setFont(font);
 	text.setCharacterSize(96);
 	text.setFillColor(Color(108,105,141));
@@ -2108,38 +2099,20 @@ int main() {
 	text1.setFillColor(Color(108, 105, 141));
 	text1.setPosition(800, 100);
 	text1.setString("------------\nAcademic Portal\n");
-	text2.setFont(font);
-	text2.setCharacterSize(40);
-	text2.setFillColor(Color::Black);
-	text2.setPosition(10, 500);
-	text2.setString("");
-	text3.setFont(font);
-	text3.setCharacterSize(20);
-	text3.setFillColor(Color::Black);
-	text3.setPosition(10, 650);
-	text3.setString("");
-
-	text4.setFont(font);
-	text4.setCharacterSize(50);
-	text4.setFillColor(Color::Black);
-	text4.setPosition(650, 20);
-	text4.setString("");
-	text5.setFont(font);
-	text5.setCharacterSize(35);
-	text5.setFillColor(Color::Black);
-	text5.setPosition(500, 500);
-	text5.setString("Press Enter to continue\n\n");
 	
-	text6.setFont(font);
-	text6.setCharacterSize(30);
-	text6.setFillColor(Color::Black);
-	text6.setPosition(600, 450);
-	text6.setString("");
-	text7.setFont(font);
-	text7.setCharacterSize(50);
-	text7.setFillColor(Color(107,45,82));
-	text7.setPosition(750, 300);
-	text7.setString(" Name:Nimra Hanif\n Roll no:22L-6705");
+
+	text2.setFont(font);
+	text2.setCharacterSize(35);
+	text2.setFillColor(Color::Black);
+	text2.setPosition(500, 500);
+	text2.setString("Press Enter to continue\n\n");
+	
+
+	text3.setFont(font);
+	text3.setCharacterSize(50);
+	text3.setFillColor(Color(107,45,82));
+	text3.setPosition(750, 300);
+	text3.setString(" Name:Nimra Hanif\n Roll no:22L-6705");
 	Text inputText1;
 	inputText1.setFont(font);
 	inputText1.setCharacterSize(80);
@@ -2159,20 +2132,7 @@ int main() {
 	{
 		cout << "not opened";
 	}
-	Sprite sprite1;
-	/*Texture spriteTexture1;
-	if (spriteTexture1.loadFromFile("fast.jpg"))
-	{
-		sprite1.setTexture(spriteTexture1);
-		
-		sprite1.setPosition(10.f, 250.f);
-		sprite1.setScale(0.5, 0.5); 
-	}*/
-	/*else
-	{
-		cout << "not opened";
-	}*/
-	Sprite sprite2;
+
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -2200,23 +2160,20 @@ int main() {
 		window.draw(rectangle);
 		window.draw(rectangle1);
 		window.draw(rectangle2);
-		window.draw(rectanglef);
+		
 		window.draw(sprite);
-		window.draw(sprite1);
+
 		window.draw(text);
 		window.draw(text1);
 		window.draw(text2);
 		window.draw(text3);
-		window.draw(text4);
-		window.draw(text5);
-		window.draw(text6);
-		window.draw(text7);
-		window.draw(sprite2);
+		
+	
 		window.draw(inputText1);
 		window.display();
 		rectangle1.setPosition(Vector2f(x1, y1));
 		rectangle2.setPosition(Vector2f(x2, y2));
-		rectanglef.setPosition(Vector2f(x3, y3));
+	
 	}
 	ofstream r1;
 	r1.open("students.txt");

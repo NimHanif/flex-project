@@ -1,0 +1,7 @@
+ENG201 English_Literature Dr._Johnson 4 25 
+MATH301 Advanced_Calculus Prof._Brown 4 20 
+MUSIC110 Music_Appreciation Prof._Robinson 2 40 
+PHYS101 Physics_for_Beginners Prof._Davis 4 30 
+HIST202 World_History Dr._White 3 35 
+ART150 Introduction_to_Art Prof._Turner 3 25 
+BUS305 Business_Ethics Dr._Miller 3 25 
